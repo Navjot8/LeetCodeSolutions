@@ -1,19 +1,34 @@
 import random
-s = "?as?"
-alphabets="abcdefghijklmnopqrstuvwxyz"
-if s[len(s)-1]=="?" and len(s)>=1:
-    s+=alphabets[random.randint(0,25)]
-s=list(s)
+s = "??yw?ipkj?"
+s="a?k"
+s="?s??"
+s="j?qg??b"
+s="a?m"
+s="ubv?w"
+s="j?qg??b"
+s="j?qg??b"
+s="i??"
+flag = False
+alphabets = "abcdefghijklmnopqrstuvwxyz"
+newlist=list(s)
+start=0
+end=25
 for i in range(0,len(s)):
-    if s[i]=="?" and i <(len(s)-1):
-        t=alphabets.find(s[i+1])
-        # print(random.randint(random.randint(i,i*25)%10,25))
-        s[i]=alphabets[random.randint(random.randint(0,i*25)%10,25)]
-finalString=""
-for i in range(0,len(s)-1):
-    finalString+=s[i]
-print(finalString)
+    if newlist[i]=="?":
+        if i!= len(s)-1:
+            print("inside")
+            start=alphabets.find(newlist[i-1])+1
+            if s[i+1]!="?":
+                end=alphabets.find(newlist[i+1])-1
+                if end<=start or end==start-1:
+                    start=0
+                    end=25
+            else:
+                 start=0
+            newlist[i] = alphabets[random.randint(start, end)]
+        else:
+            start=alphabets.find(s[i-1])+1
+            newlist[i]=alphabets[random.randint(start,25)]
+print(newlist)
 
-print(random.seed(9001))
-print(random.randint(0,25))
-print(random.seed(9001))
+
