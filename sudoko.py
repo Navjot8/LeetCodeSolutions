@@ -52,6 +52,7 @@ board = [["8", "3", ".", ".", "7", ".", ".", ".", "."]
 # [70,71,72,73,74,75,76,77,78]
 # [80,81,82,83,84,85,86,87,88]
 
+# loop used to check if there is any duplicate element in the horizontally
 for i in range(len(board)):
     l1 = []
     for j in range(len(board)):
@@ -61,7 +62,7 @@ for i in range(len(board)):
             else:
                 print("game over 1!!")
                 break
-
+# loop used to check whether any duplicate present vertically
 for i in range(len(board)):
     l2 = []
     for j in range(len(board)):
@@ -72,6 +73,7 @@ for i in range(len(board)):
                 print("Game Over !!2")
                 break
 
+# loops used to check whether the any duplicate element present square wise
 count1 = 0
 flag = False
 count2 = 0
