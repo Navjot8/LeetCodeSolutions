@@ -73,6 +73,16 @@ def SumOfIndexToSpecificValue(arr, val):
         else:
             end -= 1
 
+def findPalindrom(text):
+    palindrom=""
+    for i in range(len(text)):
+        x=""
+        for k in text[i:]:
+            x+=k
+            if x==x[::-1]:
+                if len(palindrom)<len(x):
+                    palindrom=x
+    return palindrom
 
 print(SumOfIndexToSpecificValue([1, 2, 3, 4, 5, 6, 7], 8))
 print(groupingAnagraam(["eat", "tea", "ate", "bat", "sat"]))
@@ -80,4 +90,5 @@ print(removeAtleastOnecharToMakePlaindrom("abaey"))
 print(maxLengthPlaindrom("abeba"))
 print(binarySearch([1, 2, 3, 4, 5], 3))
 print(stringMatch("jkbbskjabdkfjbkjbjasnavjjaksbfaonavojosodfnaaahssdnackjknkasdfnav", "nav"))
+print(findPalindrom("utt"))
 

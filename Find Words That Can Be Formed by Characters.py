@@ -11,7 +11,7 @@ for i in chars:
     if i not in dic1:
         dic1[i] = 0
     dic1[i] += 1
-
+print(dict(sorted(dic.items(),key=lambda a:(a[1],a[0]))))
 finalCount = 0
 for i in words:
     if i[0] in dic1:
