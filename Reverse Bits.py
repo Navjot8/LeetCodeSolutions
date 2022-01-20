@@ -1,2 +1,5 @@
-string="00000010100101000001111010011100"[::-1]
-print(int(string,2))
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        string=str(n)
+        string=string[::-1]
+        return (int(string,2))
